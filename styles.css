@@ -1813,6 +1813,132 @@ footer {
   color:#8e8d9c
 }
 
+/* Larger labels and supporting copy throughout the site. */
+body {
+  font-size:16px
+}
+
+.nav {
+  font-size:15px
+}
+
+.eyebrow {
+  font-size:14px
+}
+
+.btn {
+  font-size:14px
+}
+
+.hero-lead,
+.intro-copy {
+  font-size:18px
+}
+
+.hero-proof strong,
+.hero-proof span {
+  font-size:14px;
+  white-space:nowrap
+}
+
+.photo-caption,
+.label-top {
+  font-size:14px
+}
+
+.label-bottom b {
+  font-size:15px
+}
+
+.label-bottom small,
+.art-index {
+  font-size:13px
+}
+
+.brand-strip span {
+  font-size:14px;
+  font-weight:800
+}
+
+.brand-strip b {
+  font-size:20px
+}
+
+.section-heading p,
+.philosophy-copy>p,
+.future p,
+.faq-grid>div>p,
+.contact-box>div>p {
+  font-size:17px
+}
+
+.ecosystem-filters button,
+.eco-number,
+.eco-tag,
+.principles span,
+.journey-title,
+.journey-step>span,
+.cap span {
+  font-size:13px
+}
+
+.node {
+  font-size:14px
+}
+
+.eco-card p,
+.faq-list details p {
+  font-size:16px
+}
+
+.eco-card a,
+.partner-card span,
+.principles b,
+.principles small,
+.journey-step b,
+.journey-step small,
+.cap p {
+  font-size:15px
+}
+
+.flagship-copy p {
+  font-size:17px
+}
+
+.text-link {
+  font-size:16px
+}
+
+.faq-list summary {
+  font-size:17px
+}
+
+.contact-form label,
+.contact-email {
+  font-size:15px
+}
+
+input,select,textarea {
+  font-size:16px
+}
+
+.form-note {
+  font-size:14px
+}
+
+.footer-brand p,
+.footer-links a {
+  font-size:15px
+}
+
+.footer-links b {
+  font-size:16px
+}
+
+.footer-bottom {
+  font-size:14px
+}
+
 .scroll-progress {
   position:fixed;
   top:0;
@@ -1970,6 +2096,9 @@ footer {
   .hero-grid {
     grid-template-columns:1fr
   }
+  .hero-proof {
+    grid-template-columns:repeat(2,1fr)
+  }
   .hero {
     padding-top:45px
   }
@@ -2007,7 +2136,7 @@ footer {
     text-align:center
   }
   .brand-strip b {
-    font-size:14px
+    font-size:17px
   }
   .cap-grid {
     grid-template-columns:repeat(2,1fr)
@@ -2053,7 +2182,7 @@ footer {
     left:0;
     top:20px;
     padding:9px 12px;
-    font-size:9px
+    font-size:12px
   }
   .label-bottom {
     bottom:35px;
@@ -2068,7 +2197,7 @@ footer {
     gap:8px
   }
   .hero-proof span {
-    font-size:9px
+    font-size:14px
   }
   .hero-actions {
     gap:12px
@@ -2092,7 +2221,7 @@ footer {
     height:220px
   }
   .principles {
-    grid-template-columns:repeat(3,1fr)
+    grid-template-columns:repeat(2,1fr)
   }
   .partner-grid {
     gap:12px
@@ -2109,6 +2238,9 @@ footer {
   .footer-top {
     flex-direction:column;
     gap:30px
+  }
+  .footer-links {
+    gap:25px
   }
   .footer-bottom {
     flex-direction:column;
@@ -2133,7 +2265,7 @@ footer {
     padding:9px 15px
   }
   .node.main {
-    font-size:10px;
+    font-size:13px;
     padding:15px
   }
   .journey-panel {
