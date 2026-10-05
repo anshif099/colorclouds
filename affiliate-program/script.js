@@ -1,5 +1,5 @@
-﻿const toggle = document.querySelector('.menu-toggle');
-const navigation = document.getElementById('main-navigation');
+﻿const toggle = document.querySelector('.nav-toggle');
+const navigation = document.getElementById('main-nav');
 function closeMenu() {
   navigation.classList.remove('open');
   toggle.setAttribute('aria-expanded', 'false');
@@ -12,8 +12,8 @@ toggle.addEventListener('click', () => {
 });
 navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
-document.addEventListener('click', event => { if (!event.target.closest('.header-inner')) closeMenu(); });
-window.addEventListener('resize', () => { if (window.innerWidth > 800) closeMenu(); });
+document.addEventListener('click', event => { if (!event.target.closest('.nav-wrap')) closeMenu(); });
+window.addEventListener('resize', () => { if (window.innerWidth > 950) closeMenu(); });
 
 const faqExpand = document.querySelector('.faq-expand-button');
 const faqItems = [...document.querySelectorAll('.affiliate-faq-item')];
@@ -33,25 +33,7 @@ faqExpand.addEventListener('click', () => {
 });
 faqItems.forEach(item => item.addEventListener('toggle', updateFaqControl));
 
-const contactDialog = document.getElementById('contact-dialog');
-document.querySelector('.contact-trigger').addEventListener('click', () => {
-  closeMenu();
-  contactDialog.showModal();
-  document.body.classList.add('contact-is-open');
-});
-document.querySelector('.contact-close').addEventListener('click', () => contactDialog.close());
-contactDialog.addEventListener('close', () => document.body.classList.remove('contact-is-open'));
-contactDialog.addEventListener('click', event => {
-  if (event.target !== contactDialog) return;
-  const bounds = contactDialog.getBoundingClientRect();
-  if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) contactDialog.close();
-});
-document.getElementById('contact-form').addEventListener('submit', event => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  if (!form.reportValidity()) return;
-  const values = new FormData(form);
-  const body = `Hello Colorclouds,\n\nName: ${values.get('name').trim()}\nEmail: ${values.get('email').trim()}\n\n${values.get('message').trim()}`;
-  window.location.href = `mailto:hello.colorcloudslearning@gmail.com?subject=${encodeURIComponent('Colorclouds contact enquiry')}&body=${encodeURIComponent(body)}`;
-  document.getElementById('contact-status').textContent = 'Your email draft is ready. Please send it from your email app.';
-});
+const header = document.querySelector('.site-header');
+function updateHeader() { header.classList.toggle('scrolled', window.scrollY > 20); }
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
