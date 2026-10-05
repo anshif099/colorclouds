@@ -149,3 +149,14 @@ main p { font-weight:400; }
 .affiliate-hero > .hero-book-labels { inset:0; width:auto; height:auto; display:block; transform:none; pointer-events:none; z-index:2; }
 .hero-book-labels span { position:absolute; display:block; transform:translate(-50%,-50%) rotate(3deg); text-align:center; line-height:1; font-weight:700; color:#fff; text-shadow:0 1px 3px #23233366; }
 @media(max-width:760px) { .affiliate-hero > .hero-book-labels { display:none; } }
+
+/* Center every word inside the illustrated board's writing surface. */
+.closing-panel { container-type:inline-size; }
+.closing-panel .closing-board { inset:0; width:auto; height:auto; display:block; transform:none; pointer-events:none; font-size:clamp(10px,1.5cqw,20px); line-height:1; }
+.closing-board span { position:absolute; width:8%; text-align:center; transform:translate(-50%,-50%) rotate(-1deg); }
+.closing-board span:nth-child(1) { left:93.6%; top:44%; }
+.closing-board span:nth-child(2) { left:93.2%; top:50.6%; }
+.closing-board span:nth-child(3) { left:92.8%; top:57.2%; }
+.closing-board span:nth-child(4) { left:92.4%; top:63.8%; }
+.closing-board span:nth-child(5) { left:92%; top:70.4%; }
+@media(max-width:600px) { .closing-panel .closing-board { display:none; } }
