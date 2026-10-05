@@ -1967,12 +1967,14 @@ footer {
   margin-bottom:6px
 }
 
-.footer-links a {
+.footer-links a,
+.footer-shop {
   font-size:11px;
   color:#9c9baa
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-shop:hover {
   color:white
 }
 
@@ -2099,7 +2101,8 @@ input,select,textarea {
 }
 
 .footer-brand p,
-.footer-links a {
+.footer-links a,
+.footer-shop {
   font-size:15px
 }
 
