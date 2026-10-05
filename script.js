@@ -16,6 +16,16 @@ if ('IntersectionObserver' in window) {
 const header = document.querySelector('.site-header');
 const progress = document.querySelector('.scroll-progress');
 const backTop = document.querySelector('.back-top');
+document.querySelectorAll('a[href="#top"]').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    closeMenu();
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+    });
+  });
+});
 let pending = false;
 function updateScroll() { const max = document.documentElement.scrollHeight - innerHeight; progress.style.width = (max > 0 ? scrollY / max * 100 : 0) + '%'; header.classList.toggle('scrolled', scrollY > 20); backTop.classList.toggle('visible', scrollY > 600); pending = false; }
 window.addEventListener('scroll', () => { if (!pending) { pending = true; requestAnimationFrame(updateScroll); } }, { passive: true });
