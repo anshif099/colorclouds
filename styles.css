@@ -451,12 +451,13 @@ h3 {
   background:#ee3869;
   color:white;
   border-radius:50px;
-  padding:17px 36px;
+  padding:10px 36px;
+  line-height:1.2;
   font-size:18px;
   box-shadow:0 5px 0 #cc2854
 }
 .shop-button:hover { background:#d92c5b }
-.shop-button span { font-size:26px }
+.shop-button span { font-size:26px; line-height:1 }
 
 .shop-feature-art { position:relative; padding:34px 0 20px }
 .shop-feature-art>img {
@@ -529,7 +530,7 @@ h3 {
   .shop-feature h2 { font-size:clamp(36px,7vh,64px); margin-bottom:16px }
   .shop-feature-copy>p { font-size:clamp(15px,2.2vh,18px); margin-bottom:20px }
   .shop-rainbow-line { margin-bottom:18px }
-  .shop-button { padding:12px 30px }
+  .shop-button { padding:10px 30px }
   .shop-category img { width:clamp(64px,11vh,100px); height:clamp(64px,11vh,100px); flex-shrink:0 }
   .shop-category { gap:14px; padding:14px }
   .shop-category h3 { font-size:24px }
@@ -2464,3 +2465,6 @@ input,select,textarea {
     transform:none
   }
 }
+
+/* Keep the shop call to action compact at every screen size. */
+.shop-feature .shop-button { padding-block:10px; }
