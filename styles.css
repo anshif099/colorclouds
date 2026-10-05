@@ -225,6 +225,12 @@ h3 {
   font-size:18px
 }
 
+.affiliate-cta {
+  margin-top:28px;
+  max-width:100%;
+  text-align:center
+}
+
 .btn-ghost {
   padding-left:0;
   padding-right:0;
