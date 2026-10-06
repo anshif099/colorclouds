@@ -160,3 +160,7 @@ main p { font-weight:400; }
 .closing-board span:nth-child(4) { left:92.4%; top:63.8%; }
 .closing-board span:nth-child(5) { left:92%; top:70.4%; }
 @media(max-width:600px) { .closing-panel .closing-board { display:none; } }
+
+/* Keep the shared footer logo clear of affiliate header artwork positioning. */
+.footer-brand .brand { position:static; width:auto; height:auto; overflow:visible; }
+.footer-brand .brand img { position:static; left:auto; top:auto; width:150px; height:auto; max-height:130px; object-fit:contain; transform:none; }
