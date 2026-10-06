@@ -2467,4 +2467,10 @@ input,select,textarea {
 }
 
 /* Keep the shop call to action compact at every screen size. */
-.shop-feature .shop-button { padding-block:10px; }
+.shop-feature .shop-button {
+  padding:10px 30px;
+  font-size:14px;
+  line-height:1.2;
+  gap:20px;
+}
+.shop-feature .shop-button span { font-size:26px; line-height:1; }
